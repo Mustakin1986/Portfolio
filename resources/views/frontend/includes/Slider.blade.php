@@ -4,7 +4,9 @@
         <!-- START THE CONTENT FOR THE INTRO  -->
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
-            <p class="display-2--intro">Mustakin</p>
+
+            <strong class="display-2--intro">Mustakin</strong>
+
             <span class="display-2--description lh-base">
               this is a multi-purpose responsive layout created with bootstrap v5.
               (here your can place your description text)
