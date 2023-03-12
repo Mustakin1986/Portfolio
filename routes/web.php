@@ -19,7 +19,20 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 //admin Route
-Route::get('/admin/login',[BackendController::class,'login']);
+
 
 
 Route::get('/',[FrontendController::class,'index']);
+
+
+
+Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
+     Route::get('/', [BackendController::class, 'index'])->name('back.index');
+
+ 
+ });
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
