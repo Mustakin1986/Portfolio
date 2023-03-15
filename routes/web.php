@@ -16,11 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//admin Route
-
 
 
 Route::get('/',[FrontendController::class,'index']);
