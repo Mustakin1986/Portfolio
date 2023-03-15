@@ -5,7 +5,7 @@
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
 
-            <strong class="display-2--intro">Mustakin</strong>
+            <strong class="display-2--intro">Hello! Everybody </strong>
 
             <span class="display-2--description lh-base">
               this is a multi-purpose responsive layout created with bootstrap v5.
