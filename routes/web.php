@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/',[FrontendController::class,'index']);
 
 Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/', [BackendController::class, 'index'])->name('back.index');
