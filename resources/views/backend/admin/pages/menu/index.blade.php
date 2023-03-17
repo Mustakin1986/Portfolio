@@ -2,44 +2,51 @@
  @section('page_title','Menu')
  @section('content')
  <div class="row justify-content-center">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="mb-0">Create new Menu</h4>
+                <h4 class="mb-0">Menu List</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('categories.store') }}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="name">Menu Name</label>
-                        <input class="form-control form-control-sm" name="name" id="name" placeholder="Enter your Category Name">
-                        @error('name')
-                        <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
-                        @enderror
-                    </div>
+              <table class="table table-bordered table-hover table-striped">
+                  <thead>
+                    <tr class="text-center">
+                        <th>SL</th>
+                        <th>Name</th>
+                        <th>Slug</th>
+                        <th>Status</th>
+                        <th>Created_At</th>
+                        <th>Updated_At</th>
+                        <th>Action</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Contact Us</td>
+                        <td>contact-us</td>
+                        <td>Published</td>
+                        <td>{{date('d-M-Y')}}</td>
+                        <td>{{date('d-M-Y')}}</td>
+                        <td>
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
 
-                    <div class="form-group">
-                        <label for="slug" class="mt-3">Category Slug</label>
-                        <input class="form-control form-control-sm" name="slug" id="slug" placeholder="Enter your Category slug">
-                        @error('slug')
-                        <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="status" class="mt-3">Category status</label>
-                        <select class="form-control-sm form-control">
-                            <option selected disabled>Choose your category status</option>
-                            <option value="1">Published</option>
-                            <option value="0">UnPublished</option>
-                        </select>
-                        @error('status')
-                        <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
-                        @enderror
-                    </div>
-
-                    <button class="btn btn-success btn-sm mt-3" type="submit">Create Category</button>
-                </form>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Service</td>
+                        <td>service</td>
+                        <td>Published</td>
+                        <td>{{date('d-M-Y')}}</td>
+                        <td>{{date('d-M-Y')}}</td>
+                        <td>
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                  </tbody>
+              </table>
             </div>
         </div>
     </div>
