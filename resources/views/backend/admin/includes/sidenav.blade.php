@@ -2,7 +2,7 @@
      <div class="sb-sidenav-menu">
          <div class="nav">
              <div class="sb-sidenav-menu-heading">Core</div>
-             <a class="nav-link" href="index.html">
+             <a class="nav-link" href="{{url('/Dashboard') }}">
                  <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                  Dashboard
              </a>
@@ -14,8 +14,8 @@
              </a>
              <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
-                     <a class="nav-link" href="{{ route('categories.create') }}">Menu Create</a>
-                     <a class="nav-link" href="{{ route('categories.index') }}">Menu List</a>
+                     <a class="nav-link" href="{{ route('menus.create') }}">Menu Create</a>
+                     <a class="nav-link" href="{{ route('menus.index') }}">Menu List</a>
 
                  </nav>
              </div>
@@ -25,12 +25,12 @@
                  Slider
                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
              </a>
-             <div class="collapse" id="sliderLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+             {{-- <div class="collapse" id="sliderLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
                      <a class="nav-link" href="{{ route('categories.create') }}">Category Create</a>
                      <a class="nav-link" href="{{ route('categories.index') }}">Category List</a>
                  </nav>
-             </div>
+             </div> --}}
 
              <div class="sb-sidenav-menu-heading">Addons</div>
              <a class="nav-link" href="charts.html">
