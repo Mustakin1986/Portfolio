@@ -17,7 +17,7 @@
           </li>
         </ul>
         <button type="button" class="rounded-pill btn-rounded">
-          +8801700000000
+          +880170000000
           <span>
             <i class="fas fa-phone-alt"></i>
           </span>
