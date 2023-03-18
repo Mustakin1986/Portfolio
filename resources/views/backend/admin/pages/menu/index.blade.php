@@ -36,8 +36,8 @@
                         <td>{{date($row->created_at)}}</td>
                         <td>{{date($row->updated_at)}}</td>
                         <td>
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
+                            <a href="{{url('/manu/update/'.$row->id )}}"class="btn btn-outline-info btn-sm">Edit</a>
+                            <a href="{{url('/manu/delete/'.$row->id )}}" class="btn btn-outline-danger btn-sm">Delete</a>
                         </td>
 
                     </tr>
