@@ -42,8 +42,8 @@
              </a>
              <div class="collapse" id="collapseService" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
-                     <a class="nav-link" href="{{ route('menus.create') }}">Service Create</a>
-                     <a class="nav-link" href="{{ route('menus.index') }}">Service List</a>
+                     <a class="nav-link" href="{{ route('service.create') }}">Service Create</a>
+                     <a class="nav-link" href="{{ route('service.list') }}">Service List</a>
 
                  </nav>
              </div>
