@@ -34,13 +34,7 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
      Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
 
-    //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-
-    //  Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
-    //  Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
-    //  Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
-    //  Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
-    //  Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+    
  });
 
 Auth::routes();
