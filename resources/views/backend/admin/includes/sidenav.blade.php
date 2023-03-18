@@ -25,12 +25,12 @@
                  Slider
                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
              </a>
-             {{-- <div class="collapse" id="sliderLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+             <div class="collapse" id="sliderLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
-                     <a class="nav-link" href="{{ route('categories.create') }}">Category Create</a>
-                     <a class="nav-link" href="{{ route('categories.index') }}">Category List</a>
+                     <a class="nav-link" href="{{ route('sliders.create') }}">Slider Create</a>
+                     <a class="nav-link" href="{{ route('sliders.index') }}">Slider List</a>
                  </nav>
-             </div> --}}
+             </div>
 
 
 
