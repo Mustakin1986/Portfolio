@@ -34,5 +34,10 @@ class MenuController extends Controller
 
 
     }
-
+    public function destroy($id)
+    {
+      $menuDelete = Menu::find($id);
+      $menuDelete->delete();
+      return redirect('/dashboard/menu')->back()->with('success','Menu Deleted Successfully');
+    }
 }

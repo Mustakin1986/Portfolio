@@ -20,17 +20,23 @@ use App\Http\Controllers\Frontend\FrontendController;
 */
    Route::get('/',[FrontendController::class,'index']);
 
-   Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
-   Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
 
-   //MenuBar
-   Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
-   Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
-   Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
 
 
-   //service section start
+
+
+Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
+     Route::get('/', [BackendController::class, 'index'])->name('back.index');
+
+     //MenuBar
+     Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
+     Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
+     Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
+     Route::delete('/menus/{id}',[MenuController::class,'destroy'])->name('menus.destroy');
+
+
+
 
    Route::get('/service/create',[ServiceController::class,'serviceCreate'])->name('service.create');
    Route::post('/service/store',[ServiceController::class,'serviceStore'])->name('service.store');
