@@ -28,7 +28,7 @@ class ServiceController extends Controller
         $service->slug = str_replace(' ','_',strtolower($request->description));
         $service->image = $name;
         $service->save();
-        return redirect()->back()->with('success','Service Has been created.');
+        return redirect(route('service.list'))->with('success','Service Has been created.');
     }
 
     public function serviceList(){
@@ -48,4 +48,26 @@ class ServiceController extends Controller
 
     }
 
+    public function serviceUpdate(Request $request,$id){
+        $this->validate($request,[
+            'title'=>'required|string',
+            'description'=>'required|string',
+            'image'=>'required'
+        ]);
+
+        $services = Service::find($id);
+        if(isset($request->image)){
+            if($services->image && file_exists('/backend/admin/assets/service/'.$services->image)){
+                unlink('/backend/admin/assets/service/'.$services->image);
+            }
+            $updateImage = time().'.'.$request->image->extension();
+            $request->image->move(public_path('/backend/admin/assets/service/'),$updateImage);
+            $services->image = $updateImage;
+        } 
+        $services->title = $request->title;
+        $services->description = $request->description;
+        $services->slug = str_replace(' ','_',strtolower($request->description));
+        $services->save();
+        return redirect(route('service.list'))->with('success','service has been updated');
+    }
 }

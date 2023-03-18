@@ -10,7 +10,7 @@
                         <a href="" class="btn btn-sm bg-dark text-light">Back</a>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('service.update',$services->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-control">
                                 <label for="">Service Title</label>

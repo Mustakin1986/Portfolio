@@ -28,21 +28,23 @@ use App\Http\Controllers\Frontend\FrontendController;
    Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
    Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
 
-   //service center
+   //service section start
+
    Route::get('/service/create',[ServiceController::class,'serviceCreate'])->name('service.create');
    Route::post('/service/store',[ServiceController::class,'serviceStore'])->name('service.store');
    Route::get('/service/list',[ServiceController::class,'serviceList'])->name('service.list');
    Route::get('/service/delete/{id}',[ServiceController::class,'serviceDelete'])->name('service.delete');
-   Route::get('service.edit/{id}',[ServiceController::class,'serviceEdit'])->name('service.edit');
+   Route::get('/service/edit/{id}',[ServiceController::class,'serviceEdit'])->name('service.edit');
+   Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
 
+   //service section end
+   //   Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 
-    //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-
-    //  Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
-    //  Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
-    //  Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
-    //  Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
-    //  Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+   //   Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+   //   Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+   //   Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+   //   Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
+   //   Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
  });
 
 Auth::routes();
