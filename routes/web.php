@@ -33,6 +33,9 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
      Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
      Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
+     Route::delete('/menus/{id}',[MenuController::class,'destroy'])->name('menus.destroy');
+
+
 
     //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 
