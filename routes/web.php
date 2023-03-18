@@ -27,8 +27,10 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
      Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
 
-    //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+     Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
+     Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
 
+    
     //  Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
     //  Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
     //  Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
