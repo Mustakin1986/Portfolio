@@ -16,6 +16,7 @@
                  <nav class="sb-sidenav-menu-nested nav">
                      <a class="nav-link" href="{{ route('categories.create') }}">Menu Create</a>
                      <a class="nav-link" href="{{ route('categories.index') }}">Menu List</a>
+
                  </nav>
              </div>
 

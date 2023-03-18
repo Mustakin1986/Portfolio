@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\FrontendController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/',[FrontendController::class,'index']);
+
+
 
 
 
@@ -30,8 +32,6 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
      Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
      Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
-
-
  });
 
 
