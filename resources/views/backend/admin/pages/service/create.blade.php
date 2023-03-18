@@ -16,14 +16,14 @@
                             <div class="form-control">
                                 <label for="">Service Title</label>
                                 <input type="text" name="title" class="form-control" placeholder="Enter Service Title">
-                                @error('name')
+                                @error('title')
                                 <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
                                 @enderror
                             </div>
                             <div class="form-control">
                                 <label for="">Service Description</label>
                                 <input type="text" name="description" class="form-control" placeholder="Enter Service Description">
-                                @error('name')
+                                @error('description')
                                 <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
                                 @enderror
                             </div>
