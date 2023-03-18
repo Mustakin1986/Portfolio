@@ -26,6 +26,13 @@ Route::get('/',[FrontendController::class,'index']);
 
 
 
+
+
+
+
+
+
+
 Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
