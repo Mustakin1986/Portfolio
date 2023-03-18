@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
     public function index(){
-        return view('backend.admin.pages.menu.index');
+        $allMenus=Menu::get();
+        return view('backend.admin.pages.menu.index',compact('allMenus'));
     }
 
     public function create(){

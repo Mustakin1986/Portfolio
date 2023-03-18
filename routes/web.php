@@ -19,12 +19,19 @@ use App\Http\Controllers\Frontend\FrontendController;
 */
 Route::get('/',[FrontendController::class,'index']);
 
+
+
+
+
+
+
+
 Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
      //MenuBar
-     Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
      Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
+
      Route::post('/menus/store',[MenuController::class,'Store'])->name('menus.store');
 
      Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
@@ -33,7 +40,8 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/sliders/{id}/edit',[SliderController::class,'edit'])->name('sliders.edit');
      Route::put('/sliders/{id}',[SliderController::class,'update'])->name('sliders.update');
 
-    
+
+
     
  });
 
