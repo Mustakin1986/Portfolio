@@ -20,31 +20,28 @@
                         <th>Action</th>
                   </thead>
                   <tbody>
+                    @foreach ($allMenus as $row )
                     <tr>
-                        <td>1</td>
-                        <td>Contact Us</td>
-                        <td>contact-us</td>
-                        <td>Published</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>{{date('d-M-Y')}}</td>
+                        <td>{{$loop->index+1}}</td>
+                        <td>{{$row->name}}</td>
+                        <td>{{$row->slug}}</td>
+                        <td>
+                           @if ($row->status=0)
+                             <span class="text-danger">Unpublish</span>
+                           @else
+                           <span class="text-primary">Publish</span>
+                           @endif
+
+                        </td>
+                        <td>{{date($row->created_at)}}</td>
+                        <td>{{date($row->updated_at)}}</td>
                         <td>
                             <a href="#">Edit</a>
                             <a href="#">Delete</a>
                         </td>
 
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Service</td>
-                        <td>service</td>
-                        <td>Published</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </td>
-                    </tr>
+                    @endforeach
                   </tbody>
               </table>
             </div>

@@ -23,9 +23,9 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
      //MenuBar
-     Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
      Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
      Route::post('/menus.store',[MenuController::class,'Store'])->name('menus.store');
+     Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
 
     //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 

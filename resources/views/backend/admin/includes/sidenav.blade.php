@@ -14,8 +14,8 @@
              </a>
              <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
-                     <a class="nav-link" href="{{ route('menus.create') }}">Menu Create</a>
-                     <a class="nav-link" href="{{ route('menus.index') }}">Menu List</a>
+                     <a class="nav-link" href="{{ route('menus.create') }}">Create</a>
+                     <a class="nav-link" href="{{ route('menus.index') }}">List</a>
 
                  </nav>
              </div>

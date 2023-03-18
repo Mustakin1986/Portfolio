@@ -32,7 +32,7 @@
                         <select class="form-control-sm form-control" name="status">
                             <option selected disabled>Choose your category status</option>
                             <option value="1">Published</option>
-                            <option value="0">UnPublished</option>
+                            <option value="0">Unpublished</option>
                         </select>
                         @error('status')
                         <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
