@@ -26,18 +26,16 @@ Route::get('/',[FrontendController::class,'index']);
 
 
 
-
-
-
-
-
-
-
 Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
      Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
      //MenuBar
      Route::get('/menus/create',[MenuController::class,'create'])->name('menus.create');
+
+     Route::get('/menus',[MenuController::class,'index'])->name('menus.index');
+     Route::delete('/menus/{id}',[MenuController::class,'destroy'])->name('menus.destroy');
+
+
 
      Route::post('/menus/store',[MenuController::class,'Store'])->name('menus.store');
 
