@@ -23,6 +23,8 @@ use App\Http\Controllers\Frontend\FrontendController;
 |
 */
    Route::get('/',[FrontendController::class,'index']);
+  
+ 
 
 
 
@@ -43,7 +45,7 @@ Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
 
 
      Route::post('/menus/store',[MenuController::class,'Store'])->name('menus.store');
-
+     
      Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
      Route::get('/sliders/create',[SliderController::class,'create'])->name('sliders.create');
      Route::post('/sliders/store',[SliderController::class,'store'])->name('sliders.store');
