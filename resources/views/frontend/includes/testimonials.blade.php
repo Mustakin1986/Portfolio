@@ -8,6 +8,8 @@
       </div>
 
       <!-- START THE CAROUSEL CONTENT  -->
+      @foreach ( $buyers as $buyer)
+       
       <div class="row align-items-center">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -41,6 +43,11 @@
             </div>
             <!-- CAROUSEL ITEM 2 -->
             <div class="carousel-item">
+        
+      @endforeach
+
+
+     
               <!-- testimonials card  -->
               <div class="testimonials__card">
                 <p class="lh-lg">
@@ -68,6 +75,9 @@
               </div>
             </div>
             <!-- CAROUSEL ITEM 3 -->
+            @foreach ($buyers as $buyer)
+              
+            @endforeach
             <div class="carousel-item">
               <!-- testimonials card  -->
               <div class="testimonials__card">
