@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\ContactformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +41,7 @@ use App\Http\Controllers\Frontend\FrontendController;
     //slider end
 
 
-
-
+    //SERVICE SECTION START
 
    Route::get('/service/create',[ServiceController::class,'serviceCreate'])->name('service.create');
    Route::post('/service/store',[ServiceController::class,'serviceStore'])->name('service.store');
@@ -51,6 +51,13 @@ use App\Http\Controllers\Frontend\FrontendController;
    Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
 
    //service section end
+
+   //CONTACT FORM START
+    Route::post('contactForm/create',[ContactformController::class,'contactFormCreate'])->name('contactForm.create');
+    
+   Route::get('contact/list',[ContactformController::class,'contactList'])->name('contact.list');
+
+   //CONTACT FORM END
 
  });
 
