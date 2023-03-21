@@ -7375,7 +7375,8 @@ textarea.form-control-lg {
 }
 
 .mb-0 {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    float: left;
 }
 
 .mb-1 {

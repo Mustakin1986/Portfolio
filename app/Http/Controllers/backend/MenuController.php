@@ -30,14 +30,18 @@ class MenuController extends Controller
         $menu->description= $request->description;
         $menu->Status= $request->status;
         $menu->save();
-        return redirect()->back()->with('success','Menu has been created');
-
+        return redirect(route('menus.index'))->with('success','Menu has been created');
 
     }
-    public function destroy($id)
+    public function Delete($id)
     {
       $menuDelete = Menu::find($id);
       $menuDelete->delete();
-      return redirect('/dashboard/menu')->back()->with('success','Menu Deleted Successfully');
+      return redirect(route('menus.index'))->with('success','Menu Deleted Successfully');
+    }
+
+    public function menuEdit($id)
+    {
+      return view('backend.admin.pages.menu.edit');
     }
 }
