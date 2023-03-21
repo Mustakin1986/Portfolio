@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <a href="" class="btn btn-sm bg-dark text-light">Back</a>
+                        <a href="{{ route('service.list') }}" class="btn btn-sm bg-dark text-light">Back</a>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('service.update',$services->id) }}" method="post" enctype="multipart/form-data">

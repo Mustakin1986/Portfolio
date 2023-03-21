@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header d-flex" style="justify-content:space-between;">
                         <h3>Service Create</h3>
-                        <a href="" class="btn justify-content-end btn-sm bg-dark text-light">Service List</a>
+                        <a href="{{ route('service.list') }}" class="btn justify-content-end btn-sm bg-dark text-light">Service List</a>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('service.store') }}" method="post" enctype="multipart/form-data">
