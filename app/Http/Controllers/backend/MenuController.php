@@ -19,7 +19,7 @@ class MenuController extends Controller
     public function Store(Request $request)
     {
         $this->validate($request,[
-            'name'=>'required|min3',
+            'name'=>'required|min:3',
             'description'=>'nullable',
             'status'=>'required'
         ]);
