@@ -1,5 +1,5 @@
 @extends('backend.admin.layout.master')
-@section('page_title','Contact list')
+@section('page_title','Contact Manage')
 @section('content')
     <div class="container">
         <div class="row">
