@@ -1,11 +1,12 @@
 @extends('backend.admin.layout.master')
- @section('page_title','Menu')
+ @section('page_title','')
  @section('content')
  <div class="row justify-content-center">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="mb-0">Menu List</h4>
+                <a href="{{ route('menus.create') }}"><button class="btn btn-success btn-sm m-0 addmanu"> Add Menu</button></a>
             </div>
             <div class="card-body">
               <table class="table table-bordered table-hover table-striped">
@@ -26,7 +27,7 @@
                         <td>{{$row->name}}</td>
                         <td>{{$row->slug}}</td>
                         <td>
-                           @if ($row->status=0)
+                           @if ($row->status==0)
                              <span class="text-danger">Unpublish</span>
                            @else
                            <span class="text-primary">Publish</span>
@@ -36,8 +37,8 @@
                         <td>{{date($row->created_at)}}</td>
                         <td>{{date($row->updated_at)}}</td>
                         <td>
-                            <a href="{{url('/manu/update/'.$row->id )}}"class="btn btn-outline-info btn-sm">Edit</a>
-                            <a href="{{url('/manu/delete/'.$row->id )}}" class="btn btn-outline-danger btn-sm">Delete</a>
+                            <a href="{{route('menus.edit',$row->id)}}"class="btn btn-outline-info btn-sm">Edit</a>
+                            <a href="{{route('menu.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
                         </td>
 
                     </tr>
