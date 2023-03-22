@@ -23,7 +23,7 @@
                       </thead>
                       <tbody>
 
-                        @foreach ($sliders as $slider )
+                        @foreach ($sliders_back as $slider )
                             
                         
                         <tr>

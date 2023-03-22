@@ -11,8 +11,8 @@ class FrontendController extends Controller
 {
     public function index(){
         $allMenus= Menu::get();
-       
-        return view('frontend.home.index', compact('allMenus' ));
+       $sliders = Slider::orderBy('id', 'DESC')->get();
+        return view('frontend.home.index', compact('allMenus', 'sliders' ));
     }
 
     
