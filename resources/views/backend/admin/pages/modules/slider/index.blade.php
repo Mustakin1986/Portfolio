@@ -23,16 +23,16 @@
                       </thead>
                       <tbody>
 
-                        @foreach ($sliders_back as $slider )
-                            
-                        
+                        @foreach ($sliders as $slider )
+
+
                         <tr>
                             <td class="text-center">{{ $loop->index+1 }}</td>
                             <td>{{ $slider->title }}</td>
                             <td>{{ $slider->description }}</td>
                             <td class="text-center">{{ $slider->status }}</td>
                             <td class="text-center"><img  class="img-fluid" width="45" height="45" src="{{ asset('/slider/'.$slider->image) }}" alt=""></td>
-                            
+
                             <td>
                                 <a href="{{ route('sliders.edit', $slider->id) }}">Edit</a>
                                 <a href="#">Delete</a>
@@ -40,7 +40,7 @@
 
                         </tr>
                         @endforeach
-                       
+
                       </tbody>
                   </table>
                 </div>

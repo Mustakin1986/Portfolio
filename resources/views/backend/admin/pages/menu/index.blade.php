@@ -27,18 +27,20 @@
                         <td>{{$row->name}}</td>
                         <td>{{$row->slug}}</td>
                         <td>
-                           @if ($row->status=0)
+                           @if ($row->status==0)
                              <span class="text-danger">Unpublish</span>
                            @else
                            <span class="text-primary">Publish</span>
                            @endif
 
                         </td>
-                        <td>{{date($row->created_at)}}</td>
-                        <td>{{date($row->updated_at)}}</td>
+                        <td>{{$row->created_at->toFormattedDateString()}}</td>
+                        {{-- <td>{{$row->updated_at->toFormattedDateString()}}</td> --}}
+                        {{-- custom Date Function --}}
+                        <td>{{\carbon\carbon::parse($row->updated_at)->format('d/m/y')}}</td>
                         <td>
                             <a href="{{route('menus.edit',$row->id)}}"class="btn btn-outline-info btn-sm">Edit</a>
-                            <a href="{{route('menus.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
+                            <a href="{{route('menu.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
                         </td>
 
                     </tr>
