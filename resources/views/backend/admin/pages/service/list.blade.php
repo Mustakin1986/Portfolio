@@ -13,23 +13,23 @@
                     <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Sl.</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Action</th>
+                                    <th class="text-center"scope="col">Sl.</th>
+                                    <th class="text-center"scope="col">Title</th>
+                                    <th class="text-center"scope="col">Description</th>
+                                    <th class="text-center"scope="col">Image</th>
+                                    <th class="text-center"scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($services as $row)
                                     <tr>
-                                        <th scope="row">{{ $loop->index+1 }}</th>
-                                        <td>{{ $row->title }}</td>
-                                        <td>{{ $row->description }}</td>
-                                        <td>
+                                        <th  class="align-middle"scope="row">{{ $loop->index+1 }}</th>
+                                        <td class="align-middle">{{ $row->title }}</td>
+                                        <td class="align-middle">{{ $row->description }}</td>
+                                        <td class="align-middle text-center">
                                             <img src="{{ asset('/backend/admin/assets/service/'.$row->image) }}" alt="" width=50 height=50>
                                         </td>
-                                        <td>
+                                        <td class="align-middle text-center">
                                             <a href="{{ route('service.edit',$row->id) }}" class="btn btn-success btn-sm">Edit</a>
                                             <a href="{{ route('service.delete',$row->id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are You Sure ?')">Delete</a>
                                         </td>
