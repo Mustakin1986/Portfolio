@@ -28,10 +28,11 @@
 
                     <div class="form-group">
                         <label for="status" class="mt-3">status</label>
-                        <select class="form-control-sm form-control" name="status">
-                            <option selected disabled>Choose your category status</option>
-                            <option class="selected" value="{{ $menuEdit->status }}" selected >{{ $menuEdit->status }}</option>
-                        </select>
+                        <select class="form-control" name="status">
+							<option disabled>Select A Status</option>
+							<option value=" {{1}}" @if($menuEdit->status==1) Selected @endif>  Publish</option>
+							<option value=" {{0}} " @if($menuEdit->status==0) Selected @endif>Unpublish</option>
+						</select>
                         @error('status')
                         <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
                         @enderror
