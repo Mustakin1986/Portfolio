@@ -8,37 +8,43 @@
       </div>
 
       <!-- START THE CAROUSEL CONTENT  -->
-      <div class="row align-items-center">
+      {{-- @foreach ($ratings as $rating ) --}}
+
+      @foreach ($buyers as buyer)
+        
+      @endforeach
+      <div class="testimonials__card">
+        <p class="lh-lg">
+          <i class="fas fa-quote-left"></i>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+          <i class="fas fa-quote-right"></i>
+          <div class="ratings p-1">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </p>
+      </div>
+      <!-- client picture  -->
+      <div class="testimonials__picture">
+        <img src="{{asset('/frontend/images')}}/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
+      </div>
+      <!-- client name & role  -->
+      <div class="testimonials__name">
+        <h3>Patrick Muriungi</h3>
+        <p class="fw-light">CEO & founder</p>
+      </div>
+    </div>
+      {{-- <div class="row align-items-center">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <!-- CAROUSEL ITEM 1 -->
             <div class="carousel-item active">
               <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                  <div class="ratings p-1">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="{{asset('/frontend/images')}}/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Patrick Muriungi</h3>
-                <p class="fw-light">CEO & founder</p>
-              </div>
-            </div>
+              
             <!-- CAROUSEL ITEM 2 -->
             <div class="carousel-item">
               <!-- testimonials card  -->
@@ -123,13 +129,75 @@
                 <p class="fw-light">C.E.O & Founder</p>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="text-center">
             <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           </button>
           <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           </button>
           </div>
+              <div class="container">
+                <div class="from-group">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                      <div class="card mt-5">
+                        <form action="{{ route('buyer.review') }}" method="post">
+                          @csrf
+                          <div class="form-control">
+                                <textarea type="text" name="message" class="form-control" placeholder="Your message here "></textarea>
+                                @error('message')
+                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                @enderror
+                          </div>
+                            <div class="form-control">
+                                  <input type="text" name="title" class="form-control" placeholder="Enter your title ">
+                                  @error('title')
+                                  <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                  @enderror
+                          </div>
+                          <div class="form-control">
+                                <input type="text" name="description" class="form-control" placeholder="Enter your description ">
+                                @error('description')
+                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                @enderror
+                          </div>
+                          <div class="form-control">
+                            <input type="text" name="rating" class="form-control" placeholder="Enter your rating ">
+                            @error('rating')
+                            <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                            @enderror
+                      </div>
+                        <div class="form-control">
+                                <input type="text" name="description" class="form-control" placeholder="Enter your description ">
+                                @error('description')
+                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                @enderror
+                          </div>
+                          <div class="form-control">
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name ">
+                                @error('name')
+                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                @enderror
+                          </div>
+                          <div class="form-control">
+                                <input type="text" name="designation" class="form-control" placeholder="Enter your designation ">
+                                @error('designation')
+                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
+                                @enderror
+                          </div>
+                          <div class="form-control">
+                            <button type="submit" class="btn btn-sm btn-primary form-control">Submit</button>
+                          </div>
+                        </form>
+                      </div>
+                      </div>
+                      <div class="col-md-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
       </div>
     </div>
