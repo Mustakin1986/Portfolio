@@ -40,8 +40,30 @@ class MenuController extends Controller
       return redirect(route('menus.index'))->with('success','Menu Deleted Successfully');
     }
 
-    public function menuEdit($id)
+    public function Edit($id)
     {
-      return view('backend.admin.pages.menu.edit');
+        $menuEdit=Menu::find($id);
+      return view('backend.admin.pages.menu.edit',compact('menuEdit'));
+    }
+
+    public function menuUpdate(Request $request ,$id)
+    {
+        {
+            $this->validate($request,[
+                'name'=>'required|min:3',
+                'description'=>'nullable',
+                'status'=>'required'
+            ]);
+
+            $menUpdate =Menu::find($id);
+            $menUpdate->name = $request->name;
+            $menUpdate->slug= str_replace(' ','_',strtolower($request->name));
+            $menUpdate->description= $request->description;
+            $menUpdate->Status= $request->status;
+            $menUpdate->save();
+            return redirect(route('menus.index'))->with('success','Menu has been Updated');
+
+        }
+
     }
 }
