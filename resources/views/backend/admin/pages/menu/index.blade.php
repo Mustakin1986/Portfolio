@@ -27,7 +27,7 @@
                         <td>{{$row->name}}</td>
                         <td>{{$row->slug}}</td>
                         <td>
-                           @if ($row->status=0)
+                           @if ($row->status==0)
                              <span class="text-danger">Unpublish</span>
                            @else
                            <span class="text-primary">Publish</span>
@@ -38,7 +38,7 @@
                         <td>{{date($row->updated_at)}}</td>
                         <td>
                             <a href="{{route('menus.edit',$row->id)}}"class="btn btn-outline-info btn-sm">Edit</a>
-                            <a href="{{route('menus.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
+                            <a href="{{route('menu.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
                         </td>
 
                     </tr>
