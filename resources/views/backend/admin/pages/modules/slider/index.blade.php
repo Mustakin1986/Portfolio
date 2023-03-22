@@ -23,8 +23,7 @@
                       </thead>
                       <tbody>
 
-                        @foreach ($sliders as $slider )
-
+                        @foreach ($sliders_back as $slider )
 
                         <tr>
                             <td class="text-center">{{ $loop->index+1 }}</td>

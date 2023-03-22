@@ -25,7 +25,6 @@ use App\Http\Controllers\Backend\ContactInfoController;
 */
    Route::get('/',[FrontendController::class,'index']);
    Route::post('contactForm/create',[ContactInfoController::class,'contactFormCreate'])->name('contactForm.create');
-
    Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
    Route::get('/', [BackendController::class, 'index'])->name('back.index');
 

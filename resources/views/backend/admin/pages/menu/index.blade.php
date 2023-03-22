@@ -28,9 +28,9 @@
                         <td>{{$row->slug}}</td>
                         <td>
                            @if ($row->status==0)
-                             <span class="text-danger">Unpublish</span>
+                             <span class="badge bg-danger">Unpublish</span>
                            @else
-                           <span class="text-primary">Publish</span>
+                           <span class="badge bg-success">Publish</span>
                            @endif
 
                         </td>
