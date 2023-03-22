@@ -25,7 +25,6 @@
 
                         @foreach ($sliders as $slider )
 
-
                         <tr>
                             <td class="text-center">{{ $loop->index+1 }}</td>
                             <td>{{ $slider->title }}</td>
