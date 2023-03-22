@@ -22,7 +22,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($contactForm as $row )
+                            @foreach ($contactInfo as $row )
                             <tr>
                                 <th scope="row">{{ $loop->index+1 }}</th>
                                 <td>{{ $row->firstName }}</td>
@@ -33,7 +33,7 @@
                                 <td>
                                     <a href="" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
-                            </tr> 
+                            </tr>
                             @endforeach
                         </tbody>
                         </table>
@@ -42,7 +42,7 @@
 
 
             </div>
-            {{ $contactForm->links() }}
+            {{ $contactInfo->links() }}
         </div>
     </div>
 @endsection

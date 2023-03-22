@@ -11,11 +11,4 @@ class BackendController extends Controller
     {
         return view('backend.admin.pages.index');
     }
-    public function NavbarCreate(Request $request){
-    
-    }
-
-    public function CreateNavbar(){
-        return view('backend.admin.navbar.createnavbar');
-    }
 }

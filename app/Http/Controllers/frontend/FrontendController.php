@@ -12,4 +12,5 @@ class FrontendController extends Controller
         $allMenus=Menu::get();
         return view('frontend.home.index', compact('allMenus'));
     }
+
 }
