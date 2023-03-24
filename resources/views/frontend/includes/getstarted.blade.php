@@ -27,28 +27,28 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">start your project</h4>
-            <form action="#" class="row">
-              <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-12 col-md mb-3">
-                <input type="text" placeholder="Subject" id="inputLastName" class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-12 mb-3">
-                <input type="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
-              </div>
-              <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
-              </div>
-              <div class="text-center d-grid mt-1">
-                <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
-                  submit
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </div>
+            <form action="" method="post" class="row">
+              @csrf
+                <div class="col-lg-6 col-md mb-3">
+                  <input type="text" placeholder="First Name" id="inputFirstName" name="first_name" class="shadow form-control form-control-lg">
+                </div>
+                <div class="col-lg-6 col-md mb-3">
+                  <input type="text" placeholder="Last Name" id="inputLastName" name="last_name" class="shadow form-control form-control-lg">
+                </div>
+                <div class="col-lg-12 col-md mb-3">
+                  <input type="text" name="subject" placeholder="Subject" id="inputLastName" class="shadow form-control form-control-lg">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="email" name="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+                </div>
+                <div class="text-center d-grid mt-1">
+                  <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+                    submit
+                  </button>
+                </div>
             </form>
           </div>
         </div>

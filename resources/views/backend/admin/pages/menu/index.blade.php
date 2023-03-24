@@ -1,11 +1,12 @@
 @extends('backend.admin.layout.master')
- @section('page_title','Menu')
+ @section('page_title','')
  @section('content')
  <div class="row justify-content-center">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="mb-0">Menu List</h4>
+                <a href="{{ route('menus.create') }}"><button class="btn btn-success btn-sm m-0 addmanu"> Add Menu</button></a>
             </div>
             <div class="card-body">
               <table class="table table-bordered table-hover table-striped">
@@ -20,31 +21,30 @@
                         <th>Action</th>
                   </thead>
                   <tbody>
+                    @foreach ($allMenus as $row )
                     <tr>
-                        <td>1</td>
-                        <td>Contact Us</td>
-                        <td>contact-us</td>
-                        <td>Published</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>{{date('d-M-Y')}}</td>
+                        <td>{{$loop->index+1}}</td>
+                        <td>{{$row->name}}</td>
+                        <td>{{$row->slug}}</td>
                         <td>
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
+                           @if ($row->status==0)
+                             <span class="badge bg-danger">Unpublish</span>
+                           @else
+                           <span class="badge bg-success">Publish</span>
+                           @endif
+
+                        </td>
+                        <td>{{$row->created_at->toFormattedDateString()}}</td>
+                        {{-- <td>{{$row->updated_at->toFormattedDateString()}}</td> --}}
+                        {{-- custom Date Function --}}
+                        <td>{{\carbon\carbon::parse($row->updated_at)->format('d/m/y')}}</td>
+                        <td>
+                            <a href="{{route('menus.edit',$row->id)}}"class="btn btn-outline-info btn-sm">Edit</a>
+                            <a href="{{route('menu.delete',$row->id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
                         </td>
 
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Service</td>
-                        <td>service</td>
-                        <td>Published</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>{{date('d-M-Y')}}</td>
-                        <td>
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </td>
-                    </tr>
+                    @endforeach
                   </tbody>
               </table>
             </div>

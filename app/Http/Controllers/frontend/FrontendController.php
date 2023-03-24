@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Slider;
 
 class FrontendController extends Controller
 {
     public function index(){
-        return view('frontend.home.index');
+        $allMenus= Menu::get();
+       $sliders = Slider::orderBy('id', 'DESC')->get();
+        return view('frontend.home.index', compact('allMenus', 'sliders' ));
     }
+
+    
 }

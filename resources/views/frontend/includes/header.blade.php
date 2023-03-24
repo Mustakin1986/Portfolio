@@ -7,17 +7,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        
+        @foreach ($allMenus as $row )
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">contact</a>
-          </li>
+          @if ($row->status == 1)
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">{{ $row->name }}</a></li>
+          @endif
         </ul>
+        @endforeach
+        
+        
         <button type="button" class="rounded-pill btn-rounded">
-          +8801700000000
+          +88017xxxxxxxx
           <span>
             <i class="fas fa-phone-alt"></i>
           </span>
