@@ -5,13 +5,11 @@ use Illuminate\Support\Facades\Route;
 //head
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\BuyerReviewController;
-=======
 
->>>>>>> 03f019fe6cfa874d68c9d766ebcfffa69c955475
+
+
 use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ServiceController;
-
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
