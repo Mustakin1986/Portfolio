@@ -22,34 +22,19 @@
              </div>
 <!-- Menu End--->
 <!-- Slider Start--->
+
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#sliderLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                  <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                  Slider
                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
              </a>
+
              <div class="collapse" id="sliderLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                  <nav class="sb-sidenav-menu-nested nav">
                      <a class="nav-link" href="{{ route('sliders.create') }}">Slider Create</a>
                      <a class="nav-link" href="{{ route('sliders.index') }}">Slider List</a>
                  </nav>
              </div>
-
-{{-- <<<<<<< HEAD --}}
-             {{----Client-- --}}
-             {{-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#clientLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                Client
-                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-            </a>
-            <div class="collapse" id="clientLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{ route('categories.create') }}">Client Create</a>
-                    <a class="nav-link" href="{{ route('categories.index') }}">Client List</a>
-                </nav>
-            </div> --}}
-{{-- ======= cc --}}
-
-{{-- protfolio start --}}
 
 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#portfolioLayouts" aria-expanded="false" aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -67,7 +52,7 @@
 
 
 
-=======
+
 <!-- Slider End--->
 <!-- Service Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseService" aria-expanded="false" aria-controls="collapseLayouts">
@@ -95,7 +80,7 @@
                  </nav>
              </div>
 <!-- Contact Form Start--->
->>>>>>> 03f019fe6cfa874d68c9d766ebcfffa69c955475
+
              <div class="sb-sidenav-menu-heading">Addons</div>
              <a class="nav-link" href="charts.html">
                  <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

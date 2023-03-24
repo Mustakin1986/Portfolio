@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+//head
+use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\BuyerReviewController;
+
+
 
 use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ServiceController;
-
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -37,6 +40,21 @@ use App\Http\Controllers\Frontend\ContactformController;
  Route::get('/menus/{id}/edit',[MenuController::class,'Edit'])->name('menus.edit');
  Route::post('/menus/update/{id}',[MenuController::class,'menuUpdate'])->name('menus.update');
 
+
+
+     //testimonials start//
+     
+     //testimonials end//
+
+//portfolio part start
+
+Route::post('/menus/update/{id}',[MenuController::class,'menuUpdate'])->name('menus.update');
+
+//portfolio part end
+
+
+    //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+
  //Slider Controller
  Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
  Route::get('/sliders/create',[SliderController::class,'create'])->name('sliders.create');
@@ -52,20 +70,12 @@ Route::get('/service/edit/{id}',[ServiceController::class,'serviceEdit'])->name(
 Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
 
 
-   //Testimonial part start
-
-   Route::get('/buyer/create',[FrontendController::class,'buyerCreate'])->name('buyer.create');
-   Route::post('/buyer/review',[FrontendController::class,'buyerReview'])->name('buyer.review');
-   Route::get('/buyer/slide',[FrontendController::class,'buyerSlide'])->name('buyer.slide');
-
-
-   //Testimonial part end
 
    //Latest Work part start 
 
-   Route::get('/',[lastWorkController::class,''])->name('');
-
+   
    //Latest Work part end
+
 
  });
  

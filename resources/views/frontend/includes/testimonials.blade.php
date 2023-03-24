@@ -8,45 +8,16 @@
       </div>
 
       <!-- START THE CAROUSEL CONTENT  -->
-      {{-- @foreach ($ratings as $rating ) --}}
-
-      @foreach ($buyers as buyer)
-        
-      @endforeach
-      <div class="testimonials__card">
-        <p class="lh-lg">
-          <i class="fas fa-quote-left"></i>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
-          <i class="fas fa-quote-right"></i>
-          <div class="ratings p-1">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </p>
-      </div>
-      <!-- client picture  -->
-      <div class="testimonials__picture">
-        <img src="{{asset('/frontend/images')}}/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
-      </div>
-      <!-- client name & role  -->
-      <div class="testimonials__name">
-        <h3>Patrick Muriungi</h3>
-        <p class="fw-light">CEO & founder</p>
-      </div>
-    </div>
-      {{-- <div class="row align-items-center">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <!-- CAROUSEL ITEM 1 -->
             <div class="carousel-item active">
               <!-- testimonials card  -->
               
-            <!-- CAROUSEL ITEM 2 -->
+            <!-- CAROUSEL ITEM 2 --> -
             <div class="carousel-item">
+        
               <!-- testimonials card  -->
               <div class="testimonials__card">
                 <p class="lh-lg">
@@ -74,6 +45,7 @@
               </div>
             </div>
             <!-- CAROUSEL ITEM 3 -->
+        
             <div class="carousel-item">
               <!-- testimonials card  -->
               <div class="testimonials__card">
@@ -129,7 +101,7 @@
                 <p class="fw-light">C.E.O & Founder</p>
               </div>
             </div>
-          </div> --}}
+          </div> 
           <div class="text-center">
             <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           </button>
