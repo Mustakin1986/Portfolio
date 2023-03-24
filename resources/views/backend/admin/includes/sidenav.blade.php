@@ -2,11 +2,12 @@
      <div class="sb-sidenav-menu">
          <div class="nav">
              <div class="sb-sidenav-menu-heading">Core</div>
-             <a class="nav-link" href="{{url('/Dashboard') }}">
+             <a class="nav-link" href="{{ url('/dashboard') }}">
                  <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                  Dashboard
              </a>
              <div class="sb-sidenav-menu-heading">Interface</div>
+<!-- Menu Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                  <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                  Menu
@@ -19,7 +20,8 @@
 
                  </nav>
              </div>
-
+<!-- Menu End--->
+<!-- Slider Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#sliderLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                  <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                  Slider
@@ -65,6 +67,9 @@
 
 
 
+=======
+<!-- Slider End--->
+<!-- Service Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseService" aria-expanded="false" aria-controls="collapseLayouts">
                  <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                  Service
@@ -77,9 +82,20 @@
 
                  </nav>
              </div>
-
-
-
+<!-- Slider End--->
+<!-- Contact Form Start--->
+             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseLayouts">
+                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                 Contact Info
+                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+             </a>
+             <div class="collapse" id="collapseContact" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                 <nav class="sb-sidenav-menu-nested nav">
+                     <a class="nav-link" href="{{ route('contact.list') }}">Contact List</a>
+                 </nav>
+             </div>
+<!-- Contact Form Start--->
+>>>>>>> 03f019fe6cfa874d68c9d766ebcfffa69c955475
              <div class="sb-sidenav-menu-heading">Addons</div>
              <a class="nav-link" href="charts.html">
                  <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
