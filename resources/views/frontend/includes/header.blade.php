@@ -17,13 +17,15 @@
         </ul>
         @endforeach
         
-        
-        <button type="button" class="rounded-pill btn-rounded">
-          +88017xxxxxxxx
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
-        </button>
+        @foreach ($allContactInfo as $row)
+          <button type="button" class="rounded-pill btn-rounded">
+            {{ $row->phone }}
+            <span>
+              <i class="fas fa-phone-alt"></i>
+            </span>
+          </button>
+        @endforeach
+
       </div>
     </div>
   </nav>

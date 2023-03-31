@@ -18,7 +18,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="">Service Description</label>
-                                <input type="text" name="description" class="form-control" placeholder="Enter Service Description" value="{{ $services->description }}">
+                                <textarea name="description" placeholder="Enter Service Description" id="" class="form-control" cols="5" rows="5" value="{{ $services->description }}"></textarea>
                             </div>
                             <div class="form-control">
                                 <label for="">Service image</label>

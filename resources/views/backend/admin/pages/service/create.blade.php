@@ -22,7 +22,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="">Service Description</label>
-                                <input type="text" name="description" class="form-control" placeholder="Enter Service Description">
+                                <textarea name="description" placeholder="Enter Service Description" id="" class="form-control" cols="5" rows="5"></textarea>
                                 @error('description')
                                 <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
                                 @enderror

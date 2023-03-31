@@ -1,13 +1,13 @@
 @push('style')
  <style>
 
-.image-slider {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    margin-top: 75px;
-    overflow: hidden;
-}
+  .image-slider {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      margin-top: 75px;
+      overflow: hidden;
+  }
 
   .image-slider .slides{
     z-index: 1;
@@ -59,7 +59,7 @@
     @foreach ( $sliders as $slider )
     <div>
       
-      <img class="slide image-fluid" src="{{ asset('/slider/'.$slider->image) }}" alt="">
+      <img class="slide image-fluid" src="{{ asset('/slider/'.$slider->image) }}" alt="" width=200>
       <div class="info">
         <h3 class="title">{{ $slider->title }}</h3>
         <p class="description">{{ $slider->description }}</p>

@@ -59,7 +59,46 @@
                      <a class="nav-link" href="{{ route('contact.list') }}">Contact List</a>
                  </nav>
              </div>
-<!-- Contact Form Start--->
+<!-- Contact Form End--->
+<!-- Faq Start--->
+             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFaq" aria-expanded="false" aria-controls="collapseLayouts">
+                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                 Faq
+                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+             </a>
+             <div class="collapse" id="collapseFaq" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                 <nav class="sb-sidenav-menu-nested nav">
+                     <a class="nav-link" href="{{ route('faq.create') }}">Faq Create</a>
+                     <a class="nav-link" href="{{ route('faq.list') }}">Faq List</a>
+                 </nav>
+             </div>
+<!-- Faq End--->
+<!-- Client Logo Start--->
+             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClient" aria-expanded="false" aria-controls="collapseLayouts">
+                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                 Client Logo
+                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+             </a>
+             <div class="collapse" id="collapseClient" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                 <nav class="sb-sidenav-menu-nested nav">
+                     <a class="nav-link" href="{{ route('client.logo.create') }}">Logo Create</a>
+                     <a class="nav-link" href="{{ route('client.logo.list') }}">Logo List</a>
+                 </nav>
+             </div>
+<!-- Client Logo End--->
+<!-- Contact Info Start--->
+             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseContactInfo" aria-expanded="false" aria-controls="collapseLayouts">
+                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                 Contact Info
+                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+             </a>
+             <div class="collapse" id="collapseContactInfo" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                 <nav class="sb-sidenav-menu-nested nav">
+                     <a class="nav-link" href="{{ route('contact.info.create') }}">Contact Info Create</a>
+                     <a class="nav-link" href="{{ route('contact.info.list') }}">Contact Info List</a>
+                 </nav>
+             </div>
+<!-- Contact Info End--->
              <div class="sb-sidenav-menu-heading">Addons</div>
              <a class="nav-link" href="charts.html">
                  <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
