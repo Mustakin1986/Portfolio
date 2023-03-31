@@ -2,6 +2,7 @@
     <div class="container">
       <div class="row">
         <!-- CONTENT FOR THE MOBILE NUMBER  -->
+        @foreach ($allContactInfo as $row )
         <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
           <div class="contact-box__icon">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -12,9 +13,10 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">+1 728365413</a>
-            <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+            <a href="#" class="contact-box__info--title">{{ $row->phone }}</a>
+            <p class="contact-box__info--subtitle">{{$row->created_at->toFormattedDateString()}}</p>
           </div>
+
         </div>
         <!-- CONTENT FOR EMAIL  -->
         <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
@@ -28,9 +30,11 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">info@company.com</a>
+            <a href="#" class="contact-box__info--title">{{ $row->email }}</a>
             <p class="contact-box__info--subtitle">Online support</p>
           </div>
+
+
         </div>
         <!-- CONTENT FOR LOCATION  -->
         <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
@@ -44,11 +48,13 @@
               <line x1="15" y1="15" x2="15" y2="20" />
             </svg>
           </div>
+
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">New York, USA</a>
+            <a href="#" class="contact-box__info--title">{{ $row->address }}</a>
             <p class="contact-box__info--subtitle">NY 10012, US</p>
           </div>
         </div>
+        @endforeach
       </div>
     </div>
 
@@ -60,7 +66,7 @@
             connect with us on social media
           </div>
           <div class="col-lg-7 col-md-6">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100082524224811"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
