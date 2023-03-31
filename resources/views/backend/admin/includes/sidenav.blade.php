@@ -20,6 +20,19 @@
 
                  </nav>
              </div>
+             
+             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBuyer" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Buyer Review
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseBuyer" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="{{ route('buyer.create') }}">Buyer Review Create</a>
+                    <a class="nav-link" href="#">Buyer Review List</a>
+
+                </nav>
+            </div>
 <!-- Menu End--->
 <!-- Slider Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#sliderLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -99,6 +112,8 @@
                  </nav>
              </div>
 <!-- Contact Info End--->
+
+<!-- Contact Form Start--->
              <div class="sb-sidenav-menu-heading">Addons</div>
              <a class="nav-link" href="charts.html">
                  <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

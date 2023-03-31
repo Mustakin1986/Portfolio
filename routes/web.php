@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+//head
+use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\BuyerReviewController;
+
+
 
 use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\SliderController;
@@ -39,6 +43,21 @@ Route::get('/menus/delete/{id}',[MenuController::class,'Delete'])->name('menu.de
 Route::get('/menus/{id}/edit',[MenuController::class,'Edit'])->name('menus.edit');
 Route::post('/menus/update/{id}',[MenuController::class,'menuUpdate'])->name('menus.update');
 
+
+
+     //testimonials start//
+     
+     //testimonials end//
+
+//portfolio part start
+
+Route::post('/menus/update/{id}',[MenuController::class,'menuUpdate'])->name('menus.update');
+
+//portfolio part end
+
+
+    //  Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+
  //Slider Controller
 Route::get('/sliders',[SliderController::class,'index'])->name('sliders.index');
 Route::get('/sliders/create',[SliderController::class,'create'])->name('sliders.create');
@@ -52,6 +71,7 @@ Route::get('/service/list',[ServiceController::class,'serviceList'])->name('serv
 Route::get('/service/delete/{id}',[ServiceController::class,'serviceDelete'])->name('service.delete');
 Route::get('/service/edit/{id}',[ServiceController::class,'serviceEdit'])->name('service.edit');
 Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
+
 //Service Controller End
 //Foa Controller Start
 Route::get('faq/create',[FoaController::class,'faqCreate'])->name('faq.create');
@@ -60,7 +80,6 @@ Route::get('faq/list',[FoaController::class,'faqList'])->name('faq.list');
 Route::get('faq/delete/{id}',[FoaController::class,'faqdelete'])->name('faq.delete');
 Route::get('faq/edit/{id}',[FoaController::class,'faqEdit'])->name('faq.edit');
 Route::post('faq/update/{id}',[FoaController::class,'faqUpdate'])->name('faq.update');
-//Foa Controller End
  });
  
 //CONTACT FORM START
