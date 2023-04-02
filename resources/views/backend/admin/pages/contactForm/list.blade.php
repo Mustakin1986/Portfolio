@@ -25,8 +25,8 @@
                             @foreach ($contactInfo as $row )
                             <tr>
                                 <th scope="row">{{ $loop->index+1 }}</th>
-                                <td>{{ $row->firstName }}</td>
-                                <td>{{ $row->LastName }}</td>
+                                <td>{{ $row->first_name }}</td>
+                                <td>{{ $row->last_name }}</td>
                                 <td>{{ $row->subject }}</td>
                                 <td>{{ $row->email }}</td>
                                 <td>{{ $row->message }}</td>

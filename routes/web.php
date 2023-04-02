@@ -11,7 +11,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\ContactInfoController;
-
+use App\Http\Controllers\Backend\SocialMediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +25,6 @@ use App\Http\Controllers\Backend\ContactInfoController;
 */
    Route::get('/',[FrontendController::class,'index']);
    Route::post('contactForm/create',[ContactInfoController::class,'contactFormCreate'])->name('contactForm.create');
-
    Route::group(['middleware'=>'auth', 'prefix'=>'dashboard'], function (){
    Route::get('/', [BackendController::class, 'index'])->name('back.index');
 
@@ -50,6 +49,10 @@ Route::get('/service/list',[ServiceController::class,'serviceList'])->name('serv
 Route::get('/service/delete/{id}',[ServiceController::class,'serviceDelete'])->name('service.delete');
 Route::get('/service/edit/{id}',[ServiceController::class,'serviceEdit'])->name('service.edit');
 Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
+ //Social Media
+Route::get('/social_media/Create',[SocialMediaController::class,'socialMedia'])->name('socialMedia.create');
+Route::post('/social_media/store',[SocialMediaController::class,'socialMediaStore'])->name('socialMedia.store');
+Route::get('/social_media/index',[SocialMediaController::class,'index'])->name('socialMedia.index');
 
 Route::get('contact/list',[ContactInfoController::class,'contactList'])->name('contact.list');
  });

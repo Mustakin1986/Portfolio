@@ -27,8 +27,8 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">start your project</h4>
-            <form action="{{ route('contactForm.create') }}" method="post" class="row">
-              @csrf
+            <form action="{{route('contactForm.create') }}" method="post" class="row">
+                @csrf
                 <div class="col-lg-6 col-md mb-3">
                   <input type="text" placeholder="First Name" id="inputFirstName" name="first_name" class="shadow form-control form-control-lg">
                 </div>

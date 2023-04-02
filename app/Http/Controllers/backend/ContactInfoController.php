@@ -24,8 +24,8 @@ class ContactInfoController extends Controller
         ]);
 
         $contactForm = new ContactInfo();
-        $contactForm->firstName = $request->first_name;
-        $contactForm->LastName = $request->last_name;
+        $contactForm->first_name = $request->first_name;
+        $contactForm->last_name = $request->last_name;
         $contactForm->subject = $request->subject;
         $contactForm->message = $request->message;
         $contactForm->email = $request->email;

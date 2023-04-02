@@ -20,6 +20,7 @@ class MenuController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
+            'name'=>'required|min:3',
             'description'=>'nullable',
             'status'=>'required'
         ]);

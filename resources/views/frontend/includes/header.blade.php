@@ -7,13 +7,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        
         @foreach ($allMenus as $row )
         <ul class="navbar-nav">
+          @if ($row->status == 1)
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">{{ $row->name }}</a></li>
+          @endif
         </ul>
         @endforeach
+        
+        
         <button type="button" class="rounded-pill btn-rounded">
-          +8801700000000
+          +88017xxxxxxxx
           <span>
             <i class="fas fa-phone-alt"></i>
           </span>
