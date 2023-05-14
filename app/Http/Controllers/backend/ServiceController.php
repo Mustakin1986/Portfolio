@@ -48,7 +48,8 @@ class ServiceController extends Controller
 
     }
 
-    public function serviceUpdate(Request $request,$id){
+    public function serviceUpdate(Request $request,$id)
+    {
         $this->validate($request,[
             'title'=>'required|string',
             'description'=>'required|string',

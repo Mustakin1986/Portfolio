@@ -1,23 +1,24 @@
 @extends('backend.admin.layout.master')
-@section('page_title', 'Portfolio Create')
+@section('page_title', 'Subcategory Create')
 @section('content')
 <div class="container">
     <div class="row  justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="cord-header">
-                    <h4 class="text-center m-0 bg-dark text-light">Protfolio Create</h4>
+                    <h4 class="text-center m-0 bg-dark text-light">subcategory Create</h4>
                     <div class="card-body">
-                        <form action="{{ route('portfolio.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('subcategory.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             {{-- title --}}
-                            <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" name="title" class="form-control m-0 form-control-sm " placeholder="Enter Your Title">
-                                @error('title')
-                                <p class="text-danger mb-0"><small><i class="fa-solid fa-triangle-exclamation"></i> {{ $message }}</small></p>
-                                @enderror
-                            </div>
+                            <label for="title">Title</label>
+                            <select name="Portfolio_id" class="form-control">
+                                <option value="select disabled">Select A Subcategory</option>
+                                @foreach ($portfolios as $row )
+                                    <option value="{{ $portfolio->id }}">{{ $portfolio->name }}</option>
+                                @endforeach
+                            </select>
+                           
                             {{-- project_name --}}
                             <div class="form-group">
                                 <label for="project_name">Project_name</label>

@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header d-flex" style="justify-content:space-between;">
-                        <h3>Service Create</h3>
+                        <h3 class="text-center">Service Create</h3>
                         <a href="{{ route('service.list') }}" class="btn justify-content-end btn-sm bg-dark text-light">Service List</a>
                     </div>
                     <div class="card-body">

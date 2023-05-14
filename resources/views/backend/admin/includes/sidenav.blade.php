@@ -35,6 +35,7 @@
                      <a class="nav-link" href="{{ route('sliders.index') }}">Slider List</a>
                  </nav>
              </div>
+<!-- Slider End--->
 
 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#portfolioLayouts" aria-expanded="false" aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -43,31 +44,32 @@
 </a>
 <div class="collapse" id="portfolioLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
-        <a class="nav-link" href="#">Portfolio Create</a>
-        <a class="nav-link" href="#">Portfolio Edit</a>
+        <a class="nav-link" href="{{ route('portfolio.create') }}">Portfolio Create</a>
+        <a class="nav-link" href="{{ route('portfolio.list') }}">Portfolio List</a>
     </nav>
 </div>
 
 {{-- protfolio end --}}
 
+{{-- Subcategory start --}}
 
 
+<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#subcategoryLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+  Subcategory
+    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<div class="collapse" id="subcategoryLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+    <nav class="sb-sidenav-menu-nested nav">
+        <a class="nav-link" href="{{ route('subcategory.create') }}"> Subcategory Create</a>
+        <a class="nav-link" href="#"> Subcategory List</a>
+    </nav>
+</div>
 
-<!-- Slider End--->
-<!-- Service Start--->
-             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseService" aria-expanded="false" aria-controls="collapseLayouts">
-                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                 Service
-                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-             </a>
-             <div class="collapse" id="collapseService" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                 <nav class="sb-sidenav-menu-nested nav">
-                     <a class="nav-link" href="{{ route('service.create') }}">Service Create</a>
-                     <a class="nav-link" href="{{ route('service.list') }}">Service List</a>
 
-                 </nav>
-             </div>
-<!-- Slider End--->
+{{-- Subcategory end --}}
+
+
 <!-- Contact Form Start--->
              <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseLayouts">
                  <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

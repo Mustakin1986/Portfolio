@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('rating');
             $table->string('name');
+            $table->string('image');
             $table->string('designation');
             $table->timestamps();
         });

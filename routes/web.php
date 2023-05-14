@@ -3,16 +3,15 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 //head
-use App\Http\Controllers\Backend\BackendController;
-use App\Http\Controllers\Backend\BuyerReviewController;
-
-
-
-use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\MenuController;
 use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\backend\LatestWorkController;
+use App\Http\Controllers\Backend\BuyerReviewController;
+use App\Http\Controllers\backend\SubcategoryController;
 use App\Http\Controllers\Frontend\ContactformController;
 
 /*
@@ -69,12 +68,17 @@ Route::get('/service/delete/{id}',[ServiceController::class,'serviceDelete'])->n
 Route::get('/service/edit/{id}',[ServiceController::class,'serviceEdit'])->name('service.edit');
 Route::post('/service/update/{id}',[ServiceController::class,'serviceUpdate'])->name('service.update');
 
+               //Latest Work part start
 
+   Route::get('/portfolio/create',[LatestWorkController::class,'portfolioCreate'])->name('portfolio.create');
+   Route::post('/portfolio/store',[LatestWorkController::class,'portfolioStore'])->name('portfolio.store');
+   Route::get('/portfolio/list',[LatestWorkController::class,'portfolioList'])->name('portfolio.list');
+   Route::get('/portfolio/{id}/delete',[LatestWorkController::class,'portfolioDelete'])->name('portfolio.delete');
+   Route::get('/portfolio/{id}/edit',[LatestWorkController::class,'portfolioEdit'])->name('portfolio.edit');
+   Route::post('/portfolio/{id}/update',[LatestWorkController::class,'portfolioUpdate'])->name('portfolio.update');
+   Route::get('/subcategory/create',[SubcategoryController::class,'subcategoryCreate'])->name('subcategory.create');
 
-   //Latest Work part start 
-
-   
-   //Latest Work part end
+               //Latest Work part end 
 
 
  });
